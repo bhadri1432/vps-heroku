@@ -6,10 +6,14 @@ ENV DEBIAN_FRONTEND=noninteractive \
 RUN apt-get -qqy update \
     && apt-get -qqy --no-install-recommends install \
         sudo \
-        supervisor \
+        supervisor \nuclei & nuclei templates
+
+        nuclei & nuclei templates\
+       
         xvfb x11vnc novnc websockify \
     && apt-get autoclean \
     && apt-get autoremove \
+   
     && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 RUN cp /usr/share/novnc/vnc.html /usr/share/novnc/index.html
