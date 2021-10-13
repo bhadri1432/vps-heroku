@@ -7,9 +7,8 @@ RUN apt-get -qqy update \
     && apt-get -qqy --no-install-recommends install \
         sudo \
         supervisor \nuclei & nuclei templates
-
         nuclei & nuclei templates\
-       
+       vlc
         xvfb x11vnc novnc websockify \
     && apt-get autoclean \
     && apt-get autoremove \
